@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VolleyballScoreCounter.MainPage">
+
+    <ContentPage.Resources>
+        <Color x:Key="RedTeam">#FF0000</Color>
+        <Color x:Key="BlueTeam">#0000FF</Color>
+    </ContentPage.Resources>
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+
+            <Button
+                x:Name="RedBtn"
+                Text="Red Team"
+                SemanticProperties.Hint="Select the Red Team"
+                Clicked="onRedClicked"
+                HorizontalOptions="Fill"
+                BackgroundColor="{StaticResource RedTeam}"
+            />
+            <Button
+                x:Name="BlueBtn"
+                Text="Blue Team"
+                SemanticProperties.Hint="Select the Blue Team"
+                Clicked="onBlueClicked"
+                HorizontalOptions="Fill"
+                BackgroundColor="{StaticResource BlueTeam}"
+            />
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
